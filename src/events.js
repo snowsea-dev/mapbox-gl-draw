@@ -36,7 +36,9 @@ export default function(ctx) {
   };
 
   events.touchdrag = function(event) {
-    events.drag(event, endInfo => !isTap(touchStartInfo, endInfo));
+    // Edited by SnowSea
+    // events.drag(event, (endInfo) => !isTap(touchStartInfo, endInfo));
+    events.drag(event, endInfo => true)
   };
 
   events.mousemove = function(event) {
